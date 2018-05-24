@@ -1,0 +1,22 @@
+{
+  "name": "security",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^5.0.1",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "jquery-parallax.js": "^1.5.0",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.17.2",
+    "serve-favicon": "~2.4.5"
+  }
+}
