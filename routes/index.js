@@ -9,23 +9,33 @@ router.get('/',function(req,res,next){
 });
 
 router.get('/home', function(req, res, next) {
- 	res.render('index',{msg1:'class="active"',msg2:'',msg3:'',msg4:'',msg5:'',msg6:''});
+ 	res.render('index',{msg1:'class="active"',msg2:'',msg3:'',msg4:'',msg5:'',msg6:'',msg7:''});
 });
 
 router.get('/history',function(req,res,next){
-	res.render('history',{msg1:'',msg2:'class="active"',msg3:'',msg4:'',msg5:'',msg6:''});
+	res.render('history',{msg1:'',msg2:'class="active"',msg3:'',msg4:'',msg5:'',msg6:'',msg7:''});
 });
+
 router.get('/services',function(req,res,next){
-  res.render('services',{msg1:'',msg2:'',msg3:'class="active"',msg4:'',msg5:'',msg6:''});
+  res.render('services',{msg1:'',msg2:'',msg3:'class="active"',msg4:'',msg5:'',msg6:'',msg7:''});
 });
+
 router.get('/objectives', function(req, res, next) {
- 	res.render('objectives',{msg1:'',msg2:'',msg3:'',msg4:'class="active"',msg5:'',msg6:''});
+ 	res.render('objectives',{msg1:'',msg2:'',msg3:'',msg4:'class="active"',msg5:'',msg6:'',msg7:''});
 });
+
 router.get('/gallery',function(req,res,next){
-	res.render('gallery',{msg1:'',msg2:'',msg3:'',msg4:'',msg5:'class="active"',msg6:''});
+	res.render('gallery',{msg1:'',msg2:'',msg3:'',msg4:'',msg5:'class="active"',msg6:'',msg7:''});
 });
+
+router.get('/legality',function(req,res,next){
+  res.render('legality',{msg1:'',msg2:'',msg3:'',msg4:'',msg5:'',msg6:'',msg7:'class="active"'})
+});
+
 router.get('/contact', function(req, res, next) {
-    res.render('contact',{msg:"",msg1:'',msg2:'',msg3:'',msg4:'',msg5:'',msg6:'class="active"'});
+    var api=process.env.MAP_API;
+    var frame='<iframe width="100%" height="650px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key='+api+'&q=place_id:ChIJPX0MvA8HGToRGqgafI0SuRo" allowfullscreen></iframe>';
+    res.render('contact',{msg:"",msg1:'',msg2:'',msg3:'',msg4:'',msg5:'',msg6:'class="active"',msg7:'',iframe:frame});
 });
 
 router.post('/contact',function(req,res,next){

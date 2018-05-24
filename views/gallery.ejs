@@ -100,7 +100,62 @@
 		    <div class="container" style="background-color:white;font-size:14px"><br>
 		      <br>
 		      <p align="center" style="color:#801A12; font-weight:bold; font-size:24px">GALLERY</p><br>
-					
+					<div class = "row">
+			      <div class ="col-md-4 col-lg-4">
+			        <!-- Trigger the Modal -->
+			        <img id="myImg" src="/images/sec9.jpg" alt="Image" width="200" height="200">
+			      </div>
+			      <div class ="col-md-4 col-lg-4">
+			        <!-- Trigger the Modal -->
+			        <img id="myImg" src="/images/sec3.jpg" alt="Image" width="300" height="200">
+			      </div>
+			      <div class ="col-md-4 col-lg-4">
+			        <!-- Trigger the Modal -->
+			        <img id="myImg" src="/images/sec1.jpg" alt="Image" width="200" height="200">
+			      </div>
+			    </div>
+			      <br>
+			      <br>
+			      <div class="row">
+			        <div class ="col-md-4 col-lg-4">
+			          <!-- Trigger the Modal -->
+			          <img id="myImg" src="/images/sec2.jpg" alt="Image" width="300" height="150">
+			        </div>
+			        <div class ="col-md-4 col-lg-4">
+			          <!-- Trigger the Modal -->
+			          <img id="myImg" src="/images/sec4.jpg" alt="Image" width="300" height="150">
+			        </div>
+			        <div class ="col-md-4 col-lg-4">
+			          <!-- Trigger the Modal -->
+			          <img id="myImg" src="/images/sec5.jpg" alt="Image" width="300" height="150">
+			        </div>
+			      </div>
+			      <br>
+			      <br>
+			      <div class="row">
+			        <div class ="col-md-4 col-lg-4">
+			          <!-- Trigger the Modal -->
+			          <img id="myImg" src="/images/sec6.jpg" alt="Image" width="200" height="200">
+			        </div>
+			        <div class ="col-md-4 col-lg-4">
+			          <!-- Trigger the Modal -->
+			          <img id="myImg" src="/images/sec7.jpg" alt="Image" width="200" height="200" >
+			        </div>
+			        <div class ="col-md-4 col-lg-4">
+			          <!-- Trigger the Modal -->
+			          <img id="myImg" src="/images/sec8.jpg" alt="Image" width="200" height="200">
+			        </div>
+			      </div>
+
+			        <!-- The Modal -->
+			        <div id="myModal" class="modal">
+
+			        <!-- The Close Button -->
+			        <span class="close" style="color:white">X</span>
+
+			        <!-- Modal Content (The Image) -->
+			        <img class="modal-content" id="img01">
+						</div>
 		  <!-- end -->
 		  <div class="row">
 		  <marquee style="background-color:#801A12; color:white; font-size:20px">ABCDEFG</marquee>
@@ -114,7 +169,29 @@
 
 		<%- include footer.ejs %>
 
+	<script>
+	<script>
+			var modal = document.getElementById('myModal');
 
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var modalImg = document.getElementById("img01");
+			var img = document.querySelectorAll('#myImg');
+			console.log(img);
+			function popUp() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			}
+			img.forEach(img => img.addEventListener('click', popUp));
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			modal.style.display = "none";
+			}
+	</script>
+	</script>
   <!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
