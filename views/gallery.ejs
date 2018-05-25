@@ -180,6 +180,7 @@
 				modal.style.display = "block";
 				modal.style.overflow = "auto";
 				var s = this.src;
+				modal.style.background= "black" ;
 				if (s.substr(s.length - 5,1) == 9 || s.substr(s.length - 5,1) == 1 || s.substr(s.length - 5,1) == 6 || s.substr(s.length - 5,1) == 7 || s.substr(s.length - 5,1) == 8) {
 					modalImg.style.height = "20%";
 					modalImg.style.width = "40%";
@@ -188,6 +189,7 @@
 					modalImg.style.height = "60%";
 					modalImg.style.width = "86.5%";
 				}
+
 				modalImg.src = this.src;
 			}
 			img.forEach(img => img.addEventListener('click', popUp));
@@ -197,10 +199,10 @@
 
 			// When the user clicks on <span> (x), close the modal
 			onkeydown = function() {
-			modal.style.display = "none";
+				modal.style.display = "none";
 			}
 			span.onclick = function() {
-			modal.style.display = "none";
+				modal.style.display = "none";
 			}
 	</script>
 	</script>
