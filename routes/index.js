@@ -34,7 +34,7 @@ router.get('/legality',function(req,res,next){
 
 router.get('/contact', function(req, res, next) {
     var api=process.env.MAP_API;
-    var frame='<iframe width="100%" height="650px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key='+api+'&q=place_id:ChIJPX0MvA8HGToRGqgafI0SuRo" allowfullscreen></iframe>';
+    var frame='<iframe width="100%" height="450px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key='+api+'&q=place_id:ChIJPX0MvA8HGToRGqgafI0SuRo" allowfullscreen></iframe>';
     res.render('contact',{msg:"",msg1:'',msg2:'',msg3:'',msg4:'',msg5:'',msg6:'class="active"',msg7:'',iframe:frame});
 });
 
